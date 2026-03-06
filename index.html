@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متحف حب بيشو ومارلين</title>
+    <link rel="icon" href="./images/1.jpeg" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Icons (نسخة كاملة) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- شاشة التحميل الرومانسية (أول ما تفتح الموقع) -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-heart">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <p class="loading-text">بيشو ومارلين • تحميل الذكريات...</p>
+    </div>
+
+    <!-- مشغل الموسيقى الخفي (يشتغل تلقائي) -->
+  <!-- مشغل الموسيقى الخفي (يشتغل تلقائي) -->
+<audio id="bg-music" loop preload="auto">
+    <source src="./images/videos/Albumaty.Com_amrw_gabr_ahly_krar_-_wana_maak_ana_msh_bfkr.mp3" type="audio/mpeg">
+    <source src="./images/videos/Albumaty.Com_amrw_gabr_hbyby_da_-_klh_kaly_ashmana_hw.mp3" type="audio/mpeg">
+    <source src="./images/videos/Albumaty.Com_bhaa_sltan__aghnyt_mslsl_swa_swa.mp3" type="audio/mpeg">
+</audio>
+
+<!-- إضافة عنصر للتحكم في قائمة التشغيل (مخفي) -->
+<div id="playlist-control" style="display: none;">
+    <span id="current-song">1</span>
+</div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="museum">
+
+        <!-- === القسم 1: بوابة الحب === -->
+        <section class="gate-section">
+            <div class="gate-content">
+                <h1 class="gate-title-ar">بيشو <i class="fas fa-heart"></i> مارلين</h1>
+                <p class="gate-subtitle">حاولت اعبر عن حبى بالطريقة اللى اعرفها</p>
+                <div class="gate-date">17مارس2024 - 17مارس2026</div>
+                <button class="enter-btn" id="enterBtn"><span> احلى • سنتين • ف حياتى</span> <i class="fas fa-arrow-left"></i></button>
+            </div>
+            <div class="floating-roses">
+                <i class="fas fa-rose"></i><i class="fas fa-rose"></i><i class="fas fa-rose"></i>
+            </div>
+        </section>
+
+        <!-- باقي المتحف (مخفي في البداية) -->
+        <div class="museum-interior" id="museumInterior" style="display: none;">
+
+            <!-- === القسم 2: ركن الذكريات المصورة === -->
+            <section class="memory-lane">
+                <h2 class="section-title"><i class="fas fa-camera-retro"></i> ركن الذكريات || حاولت اجمع صورنا سوا ف مكان واحد عشان بحبهااووى </h2>
+                <div class="photo-grid" id="photoGrid">
+                    <!-- الصورة الرئيسية (كبيرة) -->
+                    <div class="photo-item main-photo"><img src="./images/1.jpeg" alt="love"></div>
+                    <div class="photo-item"><img src="./images/2.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/8.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/3.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/9.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/10.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/13.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/14.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/15.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/17.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/18.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/19.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/20.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/21.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/22.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/23.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/25.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/24.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/28.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/29.jpeg" alt=""></div>
+                    <div class="photo-item"><img src="./images/26.jpeg" alt=""></div>
+                </div>
+                <div class="photo-note">اسحبى الصورة عشان تشوفى تعليقى 💌</div>
+            </section>
+
+            <!-- === القسم 2.5: ركن الفيديوهات (الجديد الترندي) === -->
+            <section class="videos-section">
+                <h2 class="section-title"><i class="fas fa-video"></i> أحلى فيديوهاتنا || طبعا كل صوره بموقف و ذكرى و حكاية مختلفة </h2>
+                <div class="videos-grid" id="videosGrid">
+                    <!-- الفيديو 1 -->
+                    <div class="video-item">
+                        <video controls poster="./images/"  autoplay muted loop >
+                            <source src="./images/videos/1.mp4" type="video/mp4">
+                            متصفحك مش بيدعم الفيديو
+                        </video>
+                        <div class="video-caption">انت احلى حاجة ف الدووونيااا دى كلهاا💕</div>
+                    </div>
+                    <!-- الفيديو 3 -->
+                    <div class="video-item">
+                        <video controls poster="./images/thumbnail3.jpg" autoplay muted loop>
+                            <source src="./images/videos/3.mp4" type="video/mp4">
+                            متصفحك مش بيدعم الفيديو
+                        </video>
+                        <div class="video-caption">مع بعض دايماً يحبيبة قلبى🌚</div>
+                    </div>
+                    <!-- الفيديو 4 -->
+                    <div class="video-item">
+                        <video controls poster="./images/thumbnail4.jpg" autoplay muted loop>
+                            <source src="./images/videos/5.mp4" type="video/mp4" >
+                            متصفحك مش بيدعم الفيديو
+                        </video>
+                        <div class="video-caption">أجمل ذكرى انا بعيشها معاكى ❤️</div>
+                    </div>
+                    <div class="video-item">
+                        <video controls poster="./images/thumbnail4.jpg" autoplay muted loop>
+                            <source src="./images/videos/6.mp4" type="video/mp4" >
+                            متصفحك مش بيدعم الفيديو
+                        </video>
+                        <div class="video-caption">لحظااتى حلوة اووى اووى معاكى❤️</div>
+                    </div>
+                    <!-- زود فيديوهات قد ما تحب -->
+                </div>
+            </section>
+
+            <!-- === القسم 3: معرض المسدجات (بطريقة تفاعلية) === -->
+            <section class="messages-gallery">
+                <h2 class="section-title"><i class="fas fa-comment-dots"></i> كلامنا اللي مش بيتنسى</h2>
+                <div class="messages-slider">
+                    <div class="slider-container" id="sliderContainer">
+                        <!-- هنا هتتحط الرسائل بالجافاسكريبت -->
+                    </div>
+                    <button class="slider-btn prev"><i class="fas fa-chevron-right"></i></button>
+                    <button class="slider-btn next"><i class="fas fa-chevron-left"></i></button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </section>
+
+            <!-- === القسم 4: ركن المفاجآت (دي اللي هتطير منه) === -->
+           <section class="surprise-corner">
+                 <h2 class="section-title"><i class="fas fa-gift"></i> ركن المفاجآت</h2>
+
+                 <div class="surprise-grid">
+
+                     <!-- دبدوب -->
+                     <div class="surprise-item" id="teddyBtn">
+                         <i class="fas fa-face-smile-beam"></i>
+                         <span>دبدوب الحب</span>
+                     </div>
+                 
+                     <!-- رسالة صوتية -->
+                     <div class="surprise-item" id="voiceBtn">
+                         <i class="fas fa-microphone-alt"></i>
+                         <span>رسالة صوتية من بيشو</span>
+                     </div>
+                 
+                     <!-- وردة -->
+                     <div class="surprise-item" id="roseBtn">
+                         <i class="fas fa-spa"></i>
+                         <span>وردة بتتكلم</span>
+                     </div>
+                 
+                     <!-- لعبة -->
+                     <div class="surprise-item" id="gameBtn">
+                         <i class="fas fa-heart"></i>
+                         <span>اختبري حظك</span>
+                     </div>
+                 
+                 </div>
+             
+                 <div class="surprise-display" id="surpriseDisplay"></div>
+            </section>
+
+            <!-- === القسم 5: رسالة بيشو === -->
+           <section class="love-letter">
+                <div class="letter-container">
+                    <div class="letter-header">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <h3>لسه بختارك كل يوم</h3>
+                    </div>
+                    <div class="letter-body">
+                        <p>عدت سنتين واحنا سوا... بس الغريبة إن إحساسي ناحيتك لسه جديد كأنه أول يوم. يمكن الدنيا بتتغير حوالينا، بس الحاجة الوحيدة اللي ثابتة جوايا هي إنك أهم حد في حياتي.</p>
+                    
+                        <p>معاكي فهمت إن الحب مش كلام وخلاص… الحب إنك تبقي الأمان، والضحكة، والراحة بعد يوم طويل. معاكي كل حاجة بقت أبسط وأحلى.</p>
+                    
+                        <p>يمكن ما بقولهاش كتير… بس وجودك جنبي هو أحلى حاجة حصلتلي. وكل يوم بمر بيه معاكي بيخليني متأكد إني اختارت صح.</p>
+                    
+                        <p>ولو رجع بيا الزمن ألف مرة… هختارك برضه، نفس الاختيار، ونفس القلب.</p>
+                        <p> بحبك ❤️</p>
+                        <p class="letter-signature">— بيشو ❤️</p>
+                    </div>
+                    <div class="letter-stamp">💌</div>
+                </div>
+            </section>
+            <!-- === القسم 6: عداد الحب الرقمي === -->
+            <section class="digital-counter">
+                <div class="counter-glass">
+                    <div class="counter-label">مع بعض من</div>
+                    <div class="counter-numbers">
+                        <div class="counter-block"><span id="days">00</span> يوم</div>
+                        <div class="counter-block"><span id="hours">00</span> ساعة</div>
+                        <div class="counter-block"><span id="minutes">00</span> دقيقة</div>
+                        <div class="counter-block"><span id="seconds">00</span> ثانية</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === القسم 7: وردة ودبدوب عائمين === -->
+            <div class="floating-elements">
+                <div class="floating-teddy"><i class="fas fa-bear"></i></div>
+                <div class="floating-rose-big"><i class="fas fa-rose"></i></div>
+            </div>
+
+            <!-- === الفوتر === -->
+            <footer class="footer">
+                <p>متحف حب بيشو & مارلين • مفتوح طول العمر</p>
+                <p class="small">افتتح في 17 مارس ٢٠٢٦ بمناسبة مرور سنتين على الحب الكبير</p>
+            </footer>
+
+        </div> <!-- نهاية المتحف الداخلي -->
+
+    </main>
+
+    <!-- ملف الجافاسكريبت -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
